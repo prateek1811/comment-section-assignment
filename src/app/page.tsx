@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 import Comment from "./Comment";
 import styles from "./page.module.css";
 import ViewComment from "./viewComment";
+import Icon from "awesome-react-icons";
 
 export default function Home() {
   const [userCommentData, setUserCommentData] = useState<any>([]);
   const [replyClickedIndex, setReplyClickedIndex] = useState<number>(-1);
   const [editClickedIndex, setEditClickedIndex] = useState<number>(-1);
+  const [sortBy, setSortBy] = useState("asc");
 
   useEffect(() => {
     const storedComments = localStorage.getItem('comments');
@@ -116,14 +118,27 @@ export default function Home() {
       setUserCommentData(sortedComments);
     }
   };
+  const handlesort = () => {
+    if (sortBy === "asc") {
+      setSortBy("desc");
+    } else {
+      setSortBy("asc");
+    }
+    sortByDate(sortBy)
+  };
   
   return (
     <main className={styles.main}>
       <Comment commentHeading="Comment" onPost={onPost} />
-
       {Array(userCommentData) && userCommentData.length>0
         ? userCommentData?.map((item: any, index: number) => (
             <>
+            {index === 0 &&(
+            <div className={styles.sortBy} onClick={handlesort}>
+        Sort by: Date and time
+        <Icon name={sortBy === "asc" ? "arrow-up" : "arrow-down"} />{" "}
+      </div>
+      )}
               <ViewComment
                 isReplyVisible={true}
                 key={index}

@@ -61,7 +61,7 @@ font-weight: 600;
 }
 .viewCommentSection {
   display: block;
-  margin: 20px;
+  margin: 10px;
   border: 1px solid #F3F3F3;
   width: -webkit-fill-available;
   border-radius: 5px;
@@ -119,11 +119,10 @@ font-weight: 600;
 }
 .sortBy {
   float: right;
-  position: absolute;
   font-size: 12px;
-  margin-top:-20px;
-  top:0;
-  right:0;
   display: flex;
   cursor: pointer;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 20px 20px 0px 0px;
 }

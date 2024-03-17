@@ -28,21 +28,10 @@ export default function ViewComment(props: any) {
   const getDate = (date: any) => {
     return format(new Date(date), "dd MMM yyyy");
   };
-  const handlesort = () => {
-    if (sortBy === "asc") {
-      setSortBy("desc");
-    } else {
-      setSortBy("asc");
-    }
-    sortByDate(sortBy)
-  };
+  
 
   return (
     <div className={styles.viewCommentSection} key={childId}>
-      <div className={styles.sortBy} onClick={handlesort}>
-        Sort by
-        <Icon name={sortBy === "asc" ? "arrow-up" : "arrow-down"} />{" "}
-      </div>
       <div className={styles.date}>{getDate(data.date)}</div>
       <div className={styles.commentedByDiv}>{data.user}</div>
       <div className={styles.savedCommentDiv}>
