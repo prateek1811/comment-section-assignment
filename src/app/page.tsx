@@ -38,12 +38,15 @@ export default function Home() {
 
   const onReply = (data: number) => {
     setReplyClickedIndex(data);
+    setEditClickedIndex(-1);
   };
   const onParentEdit = (id: number, childId: any) => {
     setEditClickedIndex(id);
+    setReplyClickedIndex(-1);
   };
   const onChildEdit = (id: number, childId: any) => {
     setEditClickedIndex(childId);
+    setReplyClickedIndex(-1);
   };
 
   const handleReply = (id: any, userName: any, comment: any) => {
