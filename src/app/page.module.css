@@ -1,0 +1,129 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: sans-serif;
+}
+.commentHeading{
+  margin:10px 0px 0px 10px;
+font-size: 14px;
+font-weight: 600;
+}
+
+.commentdiv {
+  display: block;
+  margin: 20px;
+  border: 1px solid #F3F3F3;
+  width: -webkit-fill-available;
+  border-radius: 5px;
+  background-color: #F3F3F3;
+}
+.nameSection {
+  width: 100%;
+}
+.name {
+  width: -webkit-fill-available;
+  margin: 10px;
+  min-height: 30px;
+  padding: 5px;
+  border: 1px solid #D6D6D6;
+  border-radius: 2px;
+  font-family: sans-serif;
+}
+.commentSection {
+ width: 100%;
+}
+.comment {
+  width: -webkit-fill-available;
+  margin: 0px 10px 10px 10px;
+  min-height: 60px;
+  padding: 10px;
+  border: 1px solid #D6D6D6;
+  border-radius: 2px;
+  resize: none;
+  font-family: sans-serif;
+}
+.postButtonSection {
+  float: inline-end;
+  margin: 0px 10px 10px 10px;
+  .postButton {
+    width: 80px;
+    height: 30px;
+    background-color: #1392F3;
+    border: #1392F3;
+    border-radius: 2px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+}
+.viewCommentSection {
+  display: block;
+  margin: 20px;
+  border: 1px solid #F3F3F3;
+  width: -webkit-fill-available;
+  border-radius: 5px;
+  background-color: #F3F3F3;
+  min-height: 80px;
+  position: relative;
+}
+.commentedByDiv {
+  margin: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.savedCommentDiv {
+  margin: 10px;
+  font-size: 12px;
+  font-weight: 200;
+}
+.replyEditButton {
+  border: #ffffff;
+  width: 50px;
+  color: #1392F3;
+  font-weight: 600;
+  height: 30px;
+  cursor: pointer;
+  margin: 10px 0px 10px 10px;
+  background-color: #F3F3F3;
+}
+.replySection {
+  margin-left: 60px;
+  width: -webkit-fill-available;
+  display: flex;
+}
+.date {
+ font-size: 12px;
+ float: inline-end;
+ margin:10px;
+}
+.error {
+  font-size: 12px;
+  color: red;
+  margin:10px;
+}
+.icondiv {
+  width: 25px;
+  height: 25px;
+  background-color: #d8d3d3;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  cursor: pointer;
+}
+.sortBy {
+  float: right;
+  position: absolute;
+  font-size: 12px;
+  margin-top:-20px;
+  top:0;
+  right:0;
+  display: flex;
+  cursor: pointer;
+}
