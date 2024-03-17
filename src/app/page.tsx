@@ -17,7 +17,9 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    if (userCommentData.length > 0){
     localStorage.setItem('comments', JSON.stringify(userCommentData));
+    }
   }, [userCommentData]);
 
   const date= new Date()
